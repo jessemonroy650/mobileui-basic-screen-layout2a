@@ -9,7 +9,6 @@ very similar to basic-screen-layout2 except has additional pages tied to parse
 * forgotpassword.html - recover lost password
 * settings.html - name,email,password,picture
 * device.html - device information
-
-* js/fastclick.js  - remove 300ms delay form Android
+* js/fastclick.js - remove 300ms delay form Android
 * js/zepto-1.1.6.js - jquery clone
 * js/parse-1.3.2.js - parse.com service
