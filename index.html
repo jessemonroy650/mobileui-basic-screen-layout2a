@@ -50,6 +50,8 @@
             /* deals with post-iOS-7 change that covers the status bar */
             /* http://coenraets.org/blog/2013/09/phonegap-and-cordova-with-ios-7/ */
             document.body.style.marginTop = "20px";
+            document.getElementById('headerClear').style.marginTop = "20px";
+            document.getElementById('header').style.marginTop = "20px";
         }
 		Parse.initialize("t07UgUxXkxTUdkOIdgFJlIi14kG8tPgWgIRPxCcL", "FAkDpV4MMo2cTFX0hJc0gzLjaUmZvPHq2gThWk9C");
 		//updateCurrentUser();
@@ -74,19 +76,21 @@
 </head>
 <body onload="onLoad()">
 	<div id=header>
-		<span id=headerLeft>left</span>Settings<span id=headerRight>right</span>
+		<img id=headerLeft src=images/3menubars_black.png>
+        Ride Station
+		<img id=headerRight src=images/3menubars_white.png>
 	</div>
 	<div id=headerClear></div>
 	<div id=message>message</div>
 	<div id="content">
-    <ul class="">
+    <ul id=menu class="hidden">
         <a href="login.html"><li>Log In</li></a>
         <a href="forgotpassword.html"><li>Forgot Password</li></a>
         <a href="register.html"><li>Register</li></a>
         <a href="settings.html"><li>Settings</li></a>
     </ul>
 	<p class="pspacer" />
-    <ul class="">
+    <ul id=menu2 class="hidden">
         <a href="device.html"><li>Device Information</li></a>
 	</ul>
 
@@ -111,4 +115,13 @@
 </div><!-- /page -->
 
 </body>
+<script type="text/javascript">
+	$('#headerLeft').click(function() {
+		$('#menu').toggleClass('hidden');
+	});
+	$('#headerRight').click(function() {
+		$('#menu2').toggleClass('hidden');
+	});
+
+</script>
 </html>
